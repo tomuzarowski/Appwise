@@ -225,6 +225,21 @@ h1 {
   }
 }
 
+.Button {
+  border: 2px solid #9DCD48;
+  color: #9DCD48;
+  display: inline-block;
+  padding: 16px 50px;
+}
+.Button:visited {
+  background-color: transparent;
+  color: #9DCD48;
+}
+.Button:hover, .Button:focus {
+  background-color: #9DCD48;
+  color: #fff;
+}
+
 .Hero {
   background-image: url(../c7e4c70d4df01789d0b5.png);
   background-repeat: no-repeat;
@@ -274,21 +289,6 @@ h1 {
     padding: 0;
     text-align: left;
   }
-}
-
-.Button {
-  border: 2px solid #9DCD48;
-  color: #9DCD48;
-  display: inline-block;
-  padding: 16px 50px;
-}
-.Button:visited {
-  background-color: transparent;
-  color: #9DCD48;
-}
-.Button:hover, .Button:focus {
-  background-color: #9DCD48;
-  color: #fff;
 }
 
 @media (min-width: 1280px) {
@@ -353,6 +353,52 @@ h1 {
 }
 .GreenTiles__item > div div {
   text-align: left;
+}
+
+.About {
+  padding: 64px 0;
+}
+@media (min-width: 1280px) {
+  .About {
+    padding-top: 0;
+  }
+}
+.About .Container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  text-align: center;
+}
+.About .Container > img {
+  height: 82px;
+  margin: 0 auto 32px;
+  width: 233px;
+}
+.About .Container h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+.About .Container h2 span {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .About .Container {
+    align-items: center;
+    flex-direction: row;
+    gap: 163px;
+    padding: 0;
+  }
+  .About .Container > img {
+    height: 119px;
+    width: 339px;
+  }
+  .About .Container h2 {
+    font-size: 32px;
+  }
+  .About .Container > div {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=main.css.map*/

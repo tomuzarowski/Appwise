@@ -1,0 +1,50 @@
+.About {
+	padding: 64px 0;
+
+	@include query($desktop) {
+		padding-top: 0;
+	}
+
+	.Container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 5%;
+		text-align: center;
+
+		> img {
+			height: 82px;
+			margin: 0 auto 32px;
+			width: 233px;
+		}
+
+		h2 {
+			font-size: 24px;
+			font-weight: 400;
+			margin-bottom: 32px;
+
+			span {
+				font-weight: 700;
+			}
+		}
+
+		@include query($tablet) {
+			align-items: center;
+			flex-direction: row;
+			gap: 163px;
+			padding: 0;
+
+			> img {
+				height: 119px;
+				width: 339px;
+			}
+
+			h2 {
+				font-size: 32px;
+			}
+
+			> div {
+				text-align: left;
+			}
+		}
+	}
+}

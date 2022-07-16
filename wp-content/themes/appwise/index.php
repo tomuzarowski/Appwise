@@ -66,4 +66,14 @@
     </div>
 </section>
 
+<section class="About">
+    <div class="Container">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="Logo PoliLab">
+        <div>
+            <h2><?php _e('Tworzymy <span>uśmiech</span> na lata!', 'appwise'); ?></h2>
+            <p><?php _e('Polilab to nowoczesne laboratorium protetyczne działające we Wrocławiu od roku 2011. Właścicieli Michała Klarzaka i Macieja Potoczka, połączyła pasja do techniki dentystycznej oraz kreowania naturalnych uśmiechów, zarówno dla wymagających pacjetów jak i lekarzy stomatologów. Dzięki temu powstało na mapie Wrocławia niepowtarzalne miejsce, jakim jest laboratorium przy ulicy Piwnej 17b.', 'appwise'); ?></p>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
