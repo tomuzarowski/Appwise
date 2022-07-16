@@ -1,0 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+
+	span {
+		color: $color-primary;
+	}
+}
+
+h1 {
+	font-size: 26px;
+	line-height: 2.462em;
+
+	@include query($desktop) {
+		font-size: 42px;
+		line-height: 1.524em;
+	}
+}
