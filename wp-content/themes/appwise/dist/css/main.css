@@ -291,4 +291,68 @@ h1 {
   color: #fff;
 }
 
+@media (min-width: 1280px) {
+  .GreenTiles {
+    position: relative;
+    top: -125px;
+  }
+}
+.GreenTiles .Container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  .GreenTiles .Container {
+    flex-direction: row;
+  }
+}
+.GreenTiles__item {
+  color: #fff;
+  flex: 1;
+  opacity: 0.97;
+  padding: 32px;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .GreenTiles__item {
+    padding: 59px;
+  }
+}
+.GreenTiles__item:nth-child(1) {
+  background-color: rgba(157, 205, 72, 0.7);
+}
+.GreenTiles__item:nth-child(2) {
+  background-color: rgba(157, 205, 72, 0.85);
+}
+.GreenTiles__item:nth-child(3) {
+  background-color: #9DCD48;
+}
+.GreenTiles__item > h3 {
+  font-size: 22px;
+  margin-bottom: 13px;
+}
+@media (min-width: 1280px) {
+  .GreenTiles__item > h3 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+}
+.GreenTiles__item > div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.GreenTiles__item > div figure {
+  height: 60px;
+  margin-right: 29px;
+}
+.GreenTiles__item > div figure img {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+}
+.GreenTiles__item > div div {
+  text-align: left;
+}
+
 /*# sourceMappingURL=main.css.map*/

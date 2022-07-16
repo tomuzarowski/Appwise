@@ -1,0 +1,70 @@
+.GreenTiles {
+	@include query($desktop) {
+		position: relative;
+		top: -125px;
+	}
+
+	.Container {
+		display: flex;
+		flex-direction: column;
+
+		@include query($desktop) {
+			flex-direction: row;
+		}
+	}
+
+	&__item {
+		color: #fff;
+		flex: 1;
+		opacity: .97;
+		padding: 32px;
+		text-align: center;
+
+		@include query($desktop) {
+			padding: 59px;
+		}
+
+		&:nth-child(1) {
+			background-color: rgba($color-primary, .7);
+		}
+
+		&:nth-child(2) {
+			background-color: rgba($color-primary, .85);
+		}
+
+		&:nth-child(3) {
+			background-color: $color-primary;
+		}
+
+		> h3 {
+			font-size: 22px;
+			margin-bottom: 13px;
+
+			@include query($desktop) {
+				font-size: 24px;
+				margin-bottom: 32px;
+			}
+		}
+
+		> div {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			figure {
+				height: 60px;
+				margin-right: 29px;
+
+				img {
+					height: 100%;
+					object-fit: cover;
+					width: auto;
+				}
+			}
+
+			div {
+				text-align: left;
+			}
+		}
+	}
+}
