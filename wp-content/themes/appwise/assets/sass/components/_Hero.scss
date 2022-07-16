@@ -1,0 +1,53 @@
+.Hero {
+	$self: &;
+
+	background-image: url("../images/hero_bg.png");
+	background-repeat: no-repeat;
+	background-position: right 35% top;
+	background-size: 310%;
+
+	.Container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: flex-end;
+		min-height: 600px;
+	}
+
+	@include query($desktop) {
+		background-position: right 35% top;
+		background-size: cover;
+
+		.Container {
+			justify-content: center;
+			min-height: 768px;
+		}
+	}
+
+	&__headings-wrapper {
+		background-color: rgba(white, .61);
+		margin-top: auto;
+		padding: 32px 0;
+		text-align: center;
+
+		@include query($desktop) {
+			background-color: transparent;
+			margin-top: 0;
+			padding: 0;
+			text-align: left;
+		}
+	}
+
+	&__button-wrapper {
+		background-color: #fff;
+		padding: 32px 0;
+		text-align: center;
+
+		@include query($desktop) {
+			background-color: transparent;
+			margin-top: 32px;
+			padding: 0;
+			text-align: left;
+		}
+	}
+}

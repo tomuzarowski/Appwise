@@ -43,6 +43,34 @@ a {
   transition: all 250ms ease-in-out;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  color: #9DCD48;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 2.462em;
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 42px;
+    line-height: 1.524em;
+  }
+}
+
 .Container {
   margin: 0 auto;
   width: min(1180px, 100%);
@@ -62,7 +90,7 @@ a {
   width: 25px;
   z-index: 99999;
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .Hamburger {
     display: none;
   }
@@ -113,6 +141,10 @@ a {
   transform: rotate(-45deg);
 }
 
+.SiteHeader {
+  position: fixed;
+  width: 100%;
+}
 .SiteHeader .Container {
   align-items: center;
   display: flex;
@@ -154,7 +186,7 @@ a {
   opacity: 1;
   transform: translateX(0);
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .MainNav {
     background-color: transparent;
     flex-direction: row;
@@ -191,6 +223,72 @@ a {
     visibility: visible;
     width: 75%;
   }
+}
+
+.Hero {
+  background-image: url(../c7e4c70d4df01789d0b5.png);
+  background-repeat: no-repeat;
+  background-position: right 35% top;
+  background-size: 310%;
+}
+.Hero .Container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  min-height: 600px;
+}
+@media (min-width: 1280px) {
+  .Hero {
+    background-position: right 35% top;
+    background-size: cover;
+  }
+  .Hero .Container {
+    justify-content: center;
+    min-height: 768px;
+  }
+}
+.Hero__headings-wrapper {
+  background-color: rgba(255, 255, 255, 0.61);
+  margin-top: auto;
+  padding: 32px 0;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .Hero__headings-wrapper {
+    background-color: transparent;
+    margin-top: 0;
+    padding: 0;
+    text-align: left;
+  }
+}
+.Hero__button-wrapper {
+  background-color: #fff;
+  padding: 32px 0;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .Hero__button-wrapper {
+    background-color: transparent;
+    margin-top: 32px;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.Button {
+  border: 2px solid #9DCD48;
+  color: #9DCD48;
+  display: inline-block;
+  padding: 16px 50px;
+}
+.Button:visited {
+  background-color: transparent;
+  color: #9DCD48;
+}
+.Button:hover, .Button:focus {
+  background-color: #9DCD48;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map*/

@@ -18,7 +18,7 @@
 		transform: translateX(0);
 	}
 
-	@include query($tablet) {
+	@include query($desktop) {
 		background-color: transparent;
 		flex-direction: row;
 		gap: 69px;

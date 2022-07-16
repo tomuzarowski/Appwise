@@ -1,5 +1,7 @@
 .SiteHeader {
 	$self: &;
+	position: fixed;
+	width: 100%;
 
 	.Container {
 		align-items: center;

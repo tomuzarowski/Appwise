@@ -1,31 +1,18 @@
 <?php get_header(); ?>
 
-<header class="SiteHeader">
+<section class="Hero">
     <div class="Container">
-        <button class="Hamburger" id="toggle">
-            <div class="Hamburger__container">
-                <span class="Hamburger__item"></span>
-                <span class="Hamburger__item"></span>
-                <span class="Hamburger__item"></span>
-            </div>
-        </button>
 
-        <div class="SiteHeader__logo">
-            <a href="<?php echo site_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="Logo poliLab">
-            </a>
+        <div class="Hero__headings-wrapper">
+            <h1><span>Uśmiech :)</span> szyty na miarę</h1>
+            <p>PoliLab - laboratorium protetyczne</p>
         </div>
 
-        <nav class="MainNav">
-            <a href="#">O nas</a>
-            <a href="#">Realizacje</a>
-            <a href="#">Galeria</a>
-            <a href="#">Oferta</a>
-            <a href="#">Cennik</a>
-            <a href="#">Zespół</a>
-            <a href="#">Kontakt</a>
-        </nav>
+        <div class="Hero__button-wrapper">
+            <a href="#" class="Button">Zobacz ofertę</a>
+        </div>
+
     </div>
-</header>
+</section>
 
 <?php get_footer(); ?>

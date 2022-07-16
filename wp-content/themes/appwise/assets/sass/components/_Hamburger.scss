@@ -16,7 +16,7 @@ $HamburgerHeight: 9;
     width: 25px;
     z-index: 99999;
 
-    @include query($tablet) {
+    @include query($desktop) {
         display: none;
     }
 
