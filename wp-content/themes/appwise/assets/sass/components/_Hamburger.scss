@@ -1,0 +1,79 @@
+$HamburgerHeight: 9;
+
+.Hamburger {
+    $self: &;
+
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 32px;
+    outline: transparent;
+    position: absolute;
+    transition: 0.2s ease;
+    width: 25px;
+    z-index: 99999;
+
+    @include query($tablet) {
+        display: none;
+    }
+
+    &__container {
+        cursor: pointer;
+        display: block;
+        height: 18px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        width: 25px;
+    }
+
+    &__item {
+        background: #9E9FA2;
+        border-radius: 1px;
+        display: block;
+        height: 3px;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        width: 100%;
+
+        &:nth-child(1) {
+            top: 0px;
+        }
+
+        &:nth-child(2) {
+            top: #{$HamburgerHeight}px;
+            width: 100%;
+        }
+
+        &:nth-child(3) {
+            top: #{$HamburgerHeight * 2}px;
+        }
+    }
+
+    &--open {
+        #{$self}__item {
+            &:nth-child(1) {
+                left: 0px;
+                top: #{$HamburgerHeight}px;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                width: 0%;
+            }
+
+            &:nth-child(3) {
+                left: 0px;
+                top: #{$HamburgerHeight}px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

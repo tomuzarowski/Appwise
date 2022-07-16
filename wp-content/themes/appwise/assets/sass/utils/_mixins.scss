@@ -1,0 +1,7 @@
+@mixin query($breakpoint) {
+    @if ($breakpoint) {
+        @media (min-width: #{$breakpoint} ) {
+            @content;
+        }
+    }
+}

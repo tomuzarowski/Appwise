@@ -3,3 +3,14 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    color: $color-text;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    color: $color-text;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+}

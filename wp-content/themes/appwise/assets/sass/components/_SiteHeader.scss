@@ -1,0 +1,32 @@
+.SiteHeader {
+	$self: &;
+
+	.Container {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	    padding-top: 58px;
+		position: relative;
+	}
+
+	&__logo {
+		img {
+			height: 42px;
+			width: 120px;
+		}
+	}
+
+	@include query($desktop) {
+		.Container {
+			justify-content: flex-start;
+			padding-top: 47px;	
+		}
+
+		#{$self}__logo {
+			img {
+				height: 63px;
+				width: 180px;
+			}
+		}
+	}
+}

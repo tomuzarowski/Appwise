@@ -29,13 +29,13 @@ class Appwise
 
     public function themeScripts()
     {
-        $ver = defined('WP_DEBUG') && true === WP_DEBUG ? '?' . time() : null;
+        $ver = $_ENV['MODE'] === 'development' ? time() : '1.0.0';
 
-        wp_enqueue_style('appwise-main', get_template_directory_uri() . '/dist/css/main.css' . $ver, [], $ver);
+        wp_enqueue_style('appwise-main', get_template_directory_uri() . '/dist/css/main.css', [], $ver);
 
         wp_enqueue_style('appwise', get_stylesheet_uri());
 
-        wp_enqueue_script('bundle-js', get_template_directory_uri() . '/dist/js/main.js' . $ver, array('jquery'), $ver, true);
+        wp_enqueue_script('appwise-js', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), $ver, true);
     }
 }
 

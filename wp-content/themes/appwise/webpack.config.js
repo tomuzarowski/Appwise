@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -20,12 +20,12 @@ const output = {
 };
 
 const plugins = (argv) => [
-    // new BrowserSyncPlugin({
-    //     proxy: {
-    //         target: "http://localhost/nazwa-strony"
-    //     },
-    //     files: ["**/*.php", "**.*.twig"]
-    // }),
+    new BrowserSyncPlugin({
+        proxy: {
+            target: "http://localhost/appwise"
+        },
+        files: ["**/*.php"]
+    }),
     new MiniCssExtractPlugin({
         filename: 'css/[name].css',
         chunkFilename: '[id].css',
@@ -62,10 +62,7 @@ const rules = [
                     presets: ['@babel/preset-env'],
                     plugins: ['@babel/plugin-transform-runtime'],
                 },
-            },
-            {
-                loader: 'import-glob',
-            },
+            }
         ],
     },
     {
@@ -79,10 +76,7 @@ const rules = [
             },
             {
                 loader: 'sass-loader',
-            },
-            {
-                loader: 'import-glob',
-            },
+            }
         ],
     },
     {

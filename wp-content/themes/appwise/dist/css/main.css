@@ -1,6 +1,6 @@
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.73.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@12.6.0_sass@1.53.0+webpack@5.73.0/node_modules/sass-loader/dist/cjs.js!./node_modules/.pnpm/import-glob@1.5.0/node_modules/import-glob/index.js!./assets/sass/style.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.73.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@12.6.0_sass@1.53.0+webpack@5.73.0/node_modules/sass-loader/dist/cjs.js!./assets/sass/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************/
 .sr-only,
 .screen-reader-text {
   border: 0 !important;
@@ -32,9 +32,165 @@
   padding: 0;
 }
 
+body {
+  color: #474747;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  color: #474747;
+  text-decoration: none;
+  transition: all 250ms ease-in-out;
+}
+
 .Container {
   margin: 0 auto;
   width: min(1180px, 100%);
+}
+
+.Hamburger {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 32px;
+  outline: transparent;
+  position: absolute;
+  transition: 0.2s ease;
+  width: 25px;
+  z-index: 99999;
+}
+@media (min-width: 768px) {
+  .Hamburger {
+    display: none;
+  }
+}
+.Hamburger__container {
+  cursor: pointer;
+  display: block;
+  height: 18px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  width: 25px;
+}
+.Hamburger__item {
+  background: #9E9FA2;
+  border-radius: 1px;
+  display: block;
+  height: 3px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  width: 100%;
+}
+.Hamburger__item:nth-child(1) {
+  top: 0px;
+}
+.Hamburger__item:nth-child(2) {
+  top: 9px;
+  width: 100%;
+}
+.Hamburger__item:nth-child(3) {
+  top: 18px;
+}
+.Hamburger--open .Hamburger__item:nth-child(1) {
+  left: 0px;
+  top: 9px;
+  transform: rotate(45deg);
+}
+.Hamburger--open .Hamburger__item:nth-child(2) {
+  opacity: 0;
+  width: 0%;
+}
+.Hamburger--open .Hamburger__item:nth-child(3) {
+  left: 0px;
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.SiteHeader .Container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 58px;
+  position: relative;
+}
+.SiteHeader__logo img {
+  height: 42px;
+  width: 120px;
+}
+@media (min-width: 1280px) {
+  .SiteHeader .Container {
+    justify-content: flex-start;
+    padding-top: 47px;
+  }
+  .SiteHeader .SiteHeader__logo img {
+    height: 63px;
+    width: 180px;
+  }
+}
+
+.MainNav {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  inset: 0;
+  height: 100vh;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: all 250ms ease-in-out;
+  width: 100vw;
+}
+.MainNav--active {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (min-width: 768px) {
+  .MainNav {
+    background-color: transparent;
+    flex-direction: row;
+    gap: 69px;
+    height: auto;
+    justify-content: flex-end;
+    margin-left: auto;
+    opacity: 1;
+    position: relative;
+    transform: translateX(0);
+  }
+  .MainNav a {
+    display: inline-block;
+    position: relative;
+  }
+  .MainNav a::after {
+    background-color: #9DCD48;
+    bottom: -6px;
+    content: "";
+    height: 2px;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all 250ms ease-in-out;
+    visibility: hidden;
+    width: 0;
+  }
+  .MainNav a:hover, .MainNav a:active {
+    color: #9DCD48;
+  }
+  .MainNav a:hover::after, .MainNav a:active::after {
+    opacity: 1;
+    visibility: visible;
+    width: 75%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map*/
