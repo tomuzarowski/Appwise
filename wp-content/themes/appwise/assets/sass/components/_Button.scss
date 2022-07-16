@@ -1,0 +1,17 @@
+.Button {
+	border: 2px solid $color-primary;
+	color: $color-primary;
+	display: inline-block;
+	padding: 16px 50px;
+
+	&:visited {
+		background-color: transparent;
+		color: $color-primary;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $color-primary;
+		color: #fff;
+	}
+}
