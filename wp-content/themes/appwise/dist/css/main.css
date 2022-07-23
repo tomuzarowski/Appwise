@@ -74,6 +74,7 @@ h1 {
 .TwoWeights {
   font-size: 24px;
   font-weight: 400;
+  line-height: 1.167;
   margin-bottom: 32px;
 }
 .TwoWeights span {
@@ -83,6 +84,23 @@ h1 {
 @media (min-width: 768px) {
   .TwoWeights {
     font-size: 32px;
+    line-height: 2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .HeadingWithBg {
+    position: relative;
+  }
+  .HeadingWithBg::after {
+    background-color: #979797;
+    bottom: -10px;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 180px;
   }
 }
 
@@ -519,6 +537,71 @@ h1 {
 @media (min-width: 1280px) {
   .CTABanner__button {
     font-size: 32px;
+  }
+}
+
+.OurTeam {
+  padding: 64px 0;
+}
+.OurTeam .Container {
+  padding: 0 32px;
+}
+.OurTeam__heading {
+  text-align: center;
+}
+.OurTeam__subheading {
+  margin: 0 auto;
+  max-width: 782px;
+  text-align: center;
+}
+.OurTeam__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 64px;
+}
+@media (min-width: 1280px) {
+  .OurTeam__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.OurTeam__card {
+  text-align: center;
+}
+.OurTeam__card figure {
+  margin: 0 auto;
+  position: relative;
+  width: 280px;
+}
+.OurTeam__card figure::after {
+  background-color: rgba(212, 212, 212, 0.18);
+  bottom: -10px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: -12px;
+  width: 100%;
+  z-index: -1;
+}
+.OurTeam__card figure img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.OurTeam__name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.167;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.OurTeam__name span {
+  color: #9DCD48;
+  font-weight: 700;
+}
+@media (min-width: 1280px) {
+  .OurTeam__name {
+    margin-top: 40px;
   }
 }
 

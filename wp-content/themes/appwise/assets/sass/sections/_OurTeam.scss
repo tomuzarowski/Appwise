@@ -1,0 +1,72 @@
+.OurTeam {
+    padding: 64px 0;
+
+    .Container {
+        padding: 0 32px;
+    }
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__subheading {
+        margin: 0 auto;
+        max-width: 782px;
+        text-align: center;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 64px;
+
+        @include query($desktop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__card {
+        text-align: center;
+
+        figure {
+            margin: 0 auto;
+            position: relative;
+            width: 280px;
+
+            &::after {
+                background-color: rgba(#D4D4D4, 0.18);
+                bottom: -10px;
+                content: '';
+                height: 100%;
+                position: absolute;
+                right: -12px;
+                width: 100%;
+                z-index: -1;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.167;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        
+        span {
+            color: $color-primary;
+            font-weight: 700;
+        }
+
+        @include query($desktop) {
+            margin-top: 40px;
+        }
+    }
+}
