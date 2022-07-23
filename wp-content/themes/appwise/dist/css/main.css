@@ -489,4 +489,37 @@ h1 {
   }
 }
 
+.CTABanner {
+  background-image: url(../c39fc530792936a607fe.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #FFF;
+  padding: 60px 0;
+  text-align: center;
+}
+.CTABanner__heading {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+@media (min-width: 1280px) {
+  .CTABanner__heading {
+    font-size: 32px;
+    line-height: 2;
+  }
+}
+.CTABanner__button {
+  border: 2px solid #FFF;
+  color: #FFF;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px 35px;
+}
+@media (min-width: 1280px) {
+  .CTABanner__button {
+    font-size: 32px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map*/

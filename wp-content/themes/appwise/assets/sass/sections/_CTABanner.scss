@@ -1,0 +1,32 @@
+.CTABanner {
+    background-image: url("../images/cta_banner.png");    
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFF;
+    padding: 60px 0;
+    text-align: center;
+
+    &__heading {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 22px;
+
+        @include query($desktop) {
+            font-size: 32px;
+            line-height: 2;
+        }
+    }
+
+    &__button {
+        border: 2px solid #FFF;
+        color: #FFF;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 10px 35px;
+
+        @include query($desktop) {
+            font-size: 32px;
+        }
+    } 
+}

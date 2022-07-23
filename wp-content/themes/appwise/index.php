@@ -110,4 +110,10 @@
     </div>
 </section>
 
+<section class="CTABanner">
+    <h3 class="CTABanner__heading"><?php _e('Masz pytania? Zadzwoń!', 'appwise'); ?></h3>
+
+    <a href="tel:728380638" class="CTABanner__button">728 380 638</a>
+</section>
+
 <?php get_footer(); ?>
