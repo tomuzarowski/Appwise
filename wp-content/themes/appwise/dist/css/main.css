@@ -175,7 +175,7 @@ h1 {
 }
 
 .SiteHeader {
-  position: fixed;
+  position: absolute;
   width: 100%;
 }
 .SiteHeader .Container {
