@@ -560,6 +560,11 @@ h1 {
   gap: 32px;
   margin-top: 64px;
 }
+@media (min-width: 768px) {
+  .OurTeam__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 1280px) {
   .OurTeam__cards {
     grid-template-columns: repeat(4, 1fr);

@@ -21,6 +21,10 @@
         gap: 32px;
         margin-top: 64px;
 
+        @include query($tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         @include query($desktop) {
             grid-template-columns: repeat(4, 1fr);
         }
