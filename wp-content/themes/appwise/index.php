@@ -70,7 +70,7 @@
     <div class="Container">
         <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="Logo PoliLab">
         <div>
-            <h2><?php _e('Tworzymy <span>uśmiech</span> na lata!', 'appwise'); ?></h2>
+            <h2 class="TwoWeights"><?php _e('Tworzymy <span>uśmiech</span> na lata!', 'appwise'); ?></h2>
             <p><?php _e('Polilab to nowoczesne laboratorium protetyczne działające we Wrocławiu od roku 2011. Właścicieli Michała Klarzaka i Macieja Potoczka, połączyła pasja do techniki dentystycznej oraz kreowania naturalnych uśmiechów, zarówno dla wymagających pacjetów jak i lekarzy stomatologów. Dzięki temu powstało na mapie Wrocławia niepowtarzalne miejsce, jakim jest laboratorium przy ulicy Piwnej 17b.', 'appwise'); ?></p>
         </div>
     </div>
@@ -91,6 +91,21 @@
         <div class="CompanyInNumbers__tile">
             <p class="CompanyInNumbers__number">2115</p>
             <p class="CompanyInNumbers__info"><?php _e('Wykonanych<br />projektów', 'appwise'); ?></p>
+        </div>
+    </div>
+</section>
+
+<section class="HowWeWork">
+    <div class="Container">
+        <figure class="HowWeWork__image">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/howwework_img.png" alt="How we work">
+        </figure>
+
+        <div class="HowWeWork__info">
+            <h2 class="TwoWeights"><?php _e('Zobacz jak <span>działamy</span>', 'appwise'); ?></h2>
+
+            <p><?php _e('Uczestnicząc w licznych szkoleniach i kongresach, zarówno w kraju jak i za granicą, gwarantujemy Państwu optymalne rozwiązania protetyczne. Technika i nowoczesne technologie pozwalają na mnogość rozwiązań estetycznych, a przede wszystkim funkcjonalnych, najlepszych dla pacjenta. Wysoce estetyczne prace pełnoceramiczne oraz praca na wszystkich systemach implantologicznych, to obszary techniki dentystycznej na których skupiamy się najbardziej.', 'appwise'); ?></p>
+            <p><?php _e('Nasze laboratorium posiada prestiżowy Znak Jakości Biomet 3i. Ścisła współpraca z lekarzem jak i z samym pacjentem jest dla nas kluczem do osiągnięcia pożądanego efektu końcowego. Dokładamy wszelkich starań, aby sprostać każdemu zleceniu, by efekt końcowy stał się wizytówką naszego laboratorium oraz gabinetów, które obsługujemy. Zawsze stawiamy na najwyższą jakość opartą o nowoczesne technologie, estetykę oraz funkcjonalność prac które tworzymy.', 'appwise'); ?></p>
         </div>
     </div>
 </section>
