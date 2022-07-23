@@ -401,4 +401,43 @@ h1 {
   }
 }
 
+.CompanyInNumbers {
+  background-image: url(../4bb00022f0145338fe51.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 1280px) {
+  .CompanyInNumbers {
+    background-image: url(../8a5f9c5119b5a9f83536.png);
+  }
+}
+.CompanyInNumbers__wrapper {
+  column-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0;
+  row-gap: 30px;
+}
+@media (min-width: 1280px) {
+  .CompanyInNumbers__wrapper {
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 580px;
+    padding: 123px 0 100px;
+  }
+}
+.CompanyInNumbers__tile {
+  text-align: center;
+}
+.CompanyInNumbers__number {
+  color: #9DCD48;
+  font-size: 64px;
+  font-weight: 700;
+}
+.CompanyInNumbers__info {
+  line-height: 1.375;
+  margin: 0 auto;
+  width: 180px;
+}
+
 /*# sourceMappingURL=main.css.map*/

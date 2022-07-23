@@ -1,0 +1,40 @@
+.CompanyInNumbers {
+    background-image: url('../images/bg_tooth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include query($desktop) {
+        background-image: url("../images/banner_teeth.png");
+    }
+
+    &__wrapper {
+        column-gap: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 64px 0;
+        row-gap: 30px;
+
+        @include query($desktop) {
+            flex-direction: row;
+            margin: 0 auto;
+            max-width: 580px;
+            padding: 123px 0 100px;
+        }
+    }
+
+    &__tile {
+        text-align: center;
+    }
+
+    &__number {
+        color: $color-primary;
+        font-size: 64px;
+        font-weight: 700;
+    }
+
+    &__info {
+        line-height: 1.375;
+        margin: 0 auto;
+        width: 180px;
+    }
+}
