@@ -18,13 +18,7 @@
 		}
 
 		h2 {
-			font-size: 24px;
-			font-weight: 400;
 			margin-bottom: 32px;
-
-			span {
-				font-weight: 700;
-			}
 		}
 
 		@include query($tablet) {
@@ -36,10 +30,6 @@
 			> img {
 				height: 119px;
 				width: 339px;
-			}
-
-			h2 {
-				font-size: 32px;
 			}
 
 			> div {

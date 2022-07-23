@@ -20,3 +20,17 @@ h1 {
 		line-height: 1.524em;
 	}
 }
+
+.TwoWeights {
+	font-size: 24px;
+	font-weight: 400;
+
+	span {
+		color: $color-primary;
+		font-weight: 700;
+	}
+
+	@include query($tablet) {
+		font-size: 32px;
+	}
+}
