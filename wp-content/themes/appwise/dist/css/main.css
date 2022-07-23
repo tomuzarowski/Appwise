@@ -610,4 +610,48 @@ h1 {
   }
 }
 
+.PageFooter .Container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+@media (min-width: 1280px) {
+  .PageFooter .Container {
+    flex-direction: row;
+    gap: 120px;
+    justify-content: center;
+    padding: 38px 0 61px;
+  }
+}
+.PageFooter__logo img {
+  height: 63px;
+  width: 180px;
+}
+.PageFooter__details {
+  color: #9E9FA2;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 1280px) {
+  .PageFooter__details {
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+}
+.PageFooter__details h5 {
+  color: #9DCD48;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+@media (min-width: 1280px) {
+  .PageFooter__box > a {
+    display: inline-block;
+    margin-left: 35px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map*/

@@ -166,4 +166,41 @@
     </div>
 </section>
 
+<footer class="PageFooter">
+    <div class="Container">
+        <figure class="PageFooter__logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="PoliLab Logo">
+        </figure>
+
+        <div class="PageFooter__details">
+            <div class="PageFooter__box">
+                <h5><?php _e('O nas', 'appwise'); ?></h5>
+                <p>PoliLab</p>
+                <p>Laboratorium</p>
+                <p>Protetyczne</p>
+            </div>
+
+            <div class="PageFooter__box">
+                <h5><?php _e('Adres', 'appwise'); ?></h5>
+                <p>ul. Piwna 17B,</p>
+                <p>50-353 Wrocław</p>
+                <p>tel: 728 380 638</p>
+            </div>
+
+            <div class="PageFooter__box">
+                <h5><?php _e('Godziny otwarcia', 'appwise'); ?></h5>
+                <strong>Poniedziałek - Piątek:</strong>
+                <p>8:00 - 18:00</p>
+                <strong>Sobota - Niedziela:</strong>
+                <p>nieczynne</p>
+            </div>
+
+            <div class="PageFooter__box">
+                <h5><?php _e('Social media', 'appwise'); ?></h5>
+                <a href="https://facebook.com"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/fb.svg" alt="Ikona Facebook"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 <?php get_footer(); ?>
