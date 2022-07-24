@@ -751,41 +751,79 @@ h1 {
 .WhatWeDo__heading {
   text-align: center;
 }
-.WhatWeDo__tabs-wrapper {
+.WhatWeDo__desktop-tabs {
   display: none;
-  margin-top: 90px;
 }
 @media (min-width: 1280px) {
-  .WhatWeDo__tabs-wrapper {
-    display: flex;
+  .WhatWeDo__desktop-tabs {
+    display: block;
   }
 }
-.WhatWeDo__tab {
+.WhatWeDo__desktop-tabs-wrapper {
+  display: flex;
+  margin-top: 90px;
+}
+.WhatWeDo__tab figure svg g {
+  fill: #474747;
+}
+.WhatWeDo__desktop-tabs .WhatWeDo__tab {
   cursor: pointer;
   flex: 1;
 }
-.WhatWeDo__tab--active {
+.WhatWeDo__desktop-tabs .WhatWeDo__tab--active {
   border-bottom: 3px solid #9DCD48;
   padding-bottom: 7px;
 }
-.WhatWeDo__tab--active figure svg g {
+.WhatWeDo__desktop-tabs .WhatWeDo__tab--active figure svg g {
   fill: #9DCD48;
 }
-.WhatWeDo__tab--active .WhatWeDo__tab-heading {
+.WhatWeDo__desktop-tabs .WhatWeDo__tab--active .WhatWeDo__tab-heading {
   color: #9DCD48;
   font-weight: 700 !important;
 }
-.WhatWeDo__tab figure {
+.WhatWeDo__desktop-tabs .WhatWeDo__tab figure {
   display: flex;
   height: 79px;
   justify-content: center;
 }
-.WhatWeDo__tab .WhatWeDo__tab-heading {
+.WhatWeDo__desktop-tabs .WhatWeDo__tab .WhatWeDo__tab-heading {
   font-size: 22px;
   font-weight: 400;
   line-height: 2.909;
   margin-top: 15px;
   text-align: center;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab {
+  align-items: center;
+  background-color: #F7F7F7;
+  cursor: pointer;
+  display: flex;
+  gap: 19px;
+  margin-bottom: 42px;
+  padding: 21px 25px;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab--active figure svg g,
+.WhatWeDo__mobile-tabs .WhatWeDo__tab--active figure svg path {
+  fill: #9DCD48;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab--active .WhatWeDo__tab-heading {
+  color: #9DCD48;
+  font-weight: 700 !important;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab:not(:last-child) {
+  margin-bottom: 12px;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab figure {
+  height: 43px;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab figure svg {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__tab .WhatWeDo__tab-heading {
+  font-weight: 400;
 }
 .WhatWeDo__tabs-content {
   background-color: rgba(216, 216, 216, 0.2);
@@ -815,7 +853,7 @@ h1 {
 .WhatWeDo__content ul li {
   background-image: url(../f702579a557e6b0bcb0e.svg);
   background-repeat: no-repeat;
-  background-position: 0 center;
+  background-position: 0 3px;
   background-size: 20px;
   font-size: 18px;
   padding-left: 30px;
@@ -823,8 +861,28 @@ h1 {
 .WhatWeDo__content ul li:not(:last-of-type) {
   margin-bottom: 20px;
 }
+.WhatWeDo__mobile-tabs .WhatWeDo__content {
+  max-height: 0;
+  position: relative;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__content--active {
+  margin: 32px 0;
+  max-height: 100%;
+}
+.WhatWeDo__mobile-tabs .WhatWeDo__content ul li {
+  font-size: 16px;
+  line-height: 1.375;
+}
 .WhatWeDo__mobile-tabs {
-  display: none;
+  margin-bottom: 30px;
+}
+@media (min-width: 1280px) {
+  .WhatWeDo__mobile-tabs {
+    display: none;
+  }
+}
+.WhatWeDo__mobile-tabs .Container {
+  padding: 0 32px;
 }
 
 /*# sourceMappingURL=main.css.map*/

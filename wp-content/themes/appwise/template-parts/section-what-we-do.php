@@ -11,7 +11,7 @@ if (!empty($tabs));
     <div class="WhatWeDo__desktop-tabs">
         <div class="Container">
 
-            <div class="WhatWeDo__tabs-wrapper">
+            <div class="WhatWeDo__desktop-tabs-wrapper">
 
                 <?php foreach ($tabs as $key => $tab) : ?>
                     <div class="WhatWeDo__tab <?= $key == 0 ? 'WhatWeDo__tab--active' : '' ?>">
@@ -54,6 +54,28 @@ if (!empty($tabs));
     </div>
 
     <div class="WhatWeDo__mobile-tabs">
+        <div class="Container">
+            <?php foreach ($tabs as $key => $tab) : ?>
+                <div class="WhatWeDo__tab <?= $key == 0 ? 'WhatWeDo__tab--active' : '' ?>">
+                    <figure><?= $tab['icon_code'] ?></figure>
+                    <h4 class="WhatWeDo__tab-heading"><?= $tab['heading']; ?></h4>
+                </div>
+
+                <div class="WhatWeDo__content <?= $key == 0 ? 'WhatWeDo__content--active' : '' ?>">
+
+                    <ul>
+
+                        <?php foreach ($tab['content'] as $item) : ?>
+
+                            <li><?= $item['point']; ?></li>
+
+                        <?php endforeach; ?>
+
+                    </ul>
+
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 
 </section>
