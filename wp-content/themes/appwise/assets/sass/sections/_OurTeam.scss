@@ -34,6 +34,7 @@
         text-align: center;
 
         figure {
+            background-color: #D4D4D4;
             margin: 0 auto;
             position: relative;
             width: 280px;
@@ -50,6 +51,7 @@
             }
 
             img {
+                display: block;
                 height: 100%;
                 object-fit: cover;
                 width: 100%;
