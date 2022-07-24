@@ -89,10 +89,10 @@ h1 {
 }
 
 @media (min-width: 1280px) {
-  .HeadingWithBg {
+  .HeadingWithBorder {
     position: relative;
   }
-  .HeadingWithBg::after {
+  .HeadingWithBorder::after {
     background-color: #979797;
     bottom: -10px;
     content: "";
@@ -661,6 +661,90 @@ h1 {
     display: inline-block;
     margin-left: 35px;
   }
+}
+
+.ContactForm {
+  background-color: rgba(216, 216, 216, 0.2);
+  padding: 38px 32px 64px;
+}
+.ContactForm__heading {
+  margin: 0 auto;
+  max-width: 160px;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .ContactForm__heading {
+    max-width: 100%;
+  }
+}
+.ContactForm__wrapper {
+  margin: 46px auto;
+  max-width: 780px;
+}
+@media (min-width: 1280px) {
+  .ContactForm__wrapper {
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .ContactForm__row {
+    display: flex;
+    gap: 23px;
+    justify-content: space-between;
+  }
+  .ContactForm__row > label {
+    width: 100%;
+  }
+}
+.ContactForm input[type=submit] {
+  background-color: #9DCD48;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  height: 52px;
+  margin: 36px auto;
+  outline: none;
+  width: 200px;
+}
+.ContactForm input[type=text],
+.ContactForm input[type=email],
+.ContactForm input[type=tel],
+.ContactForm textarea {
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #D8D8D8;
+  outline: none;
+  margin: 12px 0;
+  padding: 12px;
+  width: 100%;
+}
+.ContactForm input[type=text],
+.ContactForm input[type=email],
+.ContactForm input[type=tel] {
+  height: 64px;
+}
+.ContactForm textarea {
+  min-height: 160px;
+}
+.ContactForm label {
+  color: #9E9FA2;
+}
+.ContactForm .wpcf7-list-item {
+  margin-left: 0;
+}
+.ContactForm .wpcf7-acceptance label {
+  align-items: flex-start;
+  display: flex;
+}
+.ContactForm .wpcf7-acceptance label > span {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 32px;
+  margin-left: 11px;
 }
 
 /*# sourceMappingURL=main.css.map*/

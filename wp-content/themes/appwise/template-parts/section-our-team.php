@@ -10,7 +10,7 @@ if ($q->have_posts()) :
     <section class="OurTeam">
         <div class="Container">
 
-            <h2 class="OurTeam__heading TwoWeights HeadingWithBg"><?php _e('Zespół naszych <span>specjalistów</span>', 'appwise'); ?></h2>
+            <h2 class="OurTeam__heading TwoWeights HeadingWithBorder"><?php _e('Zespół naszych <span>specjalistów</span>', 'appwise'); ?></h2>
 
             <p class="OurTeam__subheading"><?php _e('Nasz zespół tworzą kreatywni,profesjonalni technicy dentystyczni, którzy latami zbierali doświadczenie w renomowanych pracowniach i ciągle są nastawieni rozwój swoich umiejętności.
     ', 'appwise'); ?></p>

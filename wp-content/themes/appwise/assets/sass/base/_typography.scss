@@ -38,7 +38,7 @@ h1 {
 	}
 }
 
-.HeadingWithBg {
+.HeadingWithBorder {
 	@include query($desktop) {
 		position: relative;
 
