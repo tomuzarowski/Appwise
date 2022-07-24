@@ -1,6 +1,4 @@
 .Hero {
-	$self: &;
-
 	background-image: url("../images/hero_bg.png");
 	background-repeat: no-repeat;
 	background-position: right 35% top;
@@ -12,6 +10,11 @@
 		height: 100%;
 		justify-content: flex-end;
 		min-height: 600px;
+	}
+
+	@include query($tablet) {
+		background-position: center;
+		background-size: cover;
 	}
 
 	@include query($desktop) {

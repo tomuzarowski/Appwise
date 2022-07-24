@@ -7,7 +7,7 @@
         max-width: 160px;
         text-align: center;
 
-        @include query($desktop) {
+        @include query($tablet) {
             max-width: 100%;
         }
     }

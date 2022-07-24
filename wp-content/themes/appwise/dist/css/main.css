@@ -293,6 +293,12 @@ h1 {
   justify-content: flex-end;
   min-height: 600px;
 }
+@media (min-width: 768px) {
+  .Hero {
+    background-position: center;
+    background-size: cover;
+  }
+}
 @media (min-width: 1280px) {
   .Hero {
     background-position: right 35% top;
@@ -418,15 +424,20 @@ h1 {
   .About .Container {
     align-items: center;
     flex-direction: row;
+    gap: 80px;
+  }
+  .About .Container > div {
+    text-align: left;
+  }
+}
+@media (min-width: 1280px) {
+  .About .Container {
     gap: 163px;
     padding: 0;
   }
   .About .Container > img {
     height: 119px;
     width: 339px;
-  }
-  .About .Container > div {
-    text-align: left;
   }
 }
 
@@ -645,7 +656,7 @@ h1 {
   gap: 32px;
   grid-template-columns: repeat(2, 1fr);
 }
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .PageFooter__details {
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
@@ -673,7 +684,7 @@ h1 {
   max-width: 160px;
   text-align: center;
 }
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .ContactForm__heading {
     max-width: 100%;
   }

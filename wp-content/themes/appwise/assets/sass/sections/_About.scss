@@ -20,16 +20,20 @@
 		@include query($tablet) {
 			align-items: center;
 			flex-direction: row;
+			gap: 80px;
+
+			> div {
+				text-align: left;
+			}
+		}
+
+		@include query($desktop) {
 			gap: 163px;
 			padding: 0;
 
 			> img {
 				height: 119px;
 				width: 339px;
-			}
-
-			> div {
-				text-align: left;
 			}
 		}
 	}
