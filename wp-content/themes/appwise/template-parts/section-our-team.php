@@ -21,7 +21,7 @@ if ($q->have_posts()) :
 
                     <div class="OurTeam__card">
                         <figure>
-                            <a href="<?= get_post_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/team-placeholder.png" alt="Person"></a>
+                            <a href="<?= get_post_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
                         </figure>
 
                         <a href="<?= get_post_permalink(); ?>">
