@@ -25,6 +25,16 @@ class Appwise
                 'primary' => __('Menu główne', 'appwise'),
             ]
         );
+
+        if (function_exists('acf_add_options_page')) {
+            acf_add_options_page([
+                'page_title' => 'Ustawienia motywu',
+                'menu_title' => 'Ust. motywu',
+                'menu_slug'  => 'theme-settings',
+                'capability' => 'edit_posts',
+                'redirect'   => false,
+            ]);
+        }
     }
 
     public function themeScripts()
