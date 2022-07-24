@@ -518,6 +518,7 @@ h1 {
   background-image: url(../c39fc530792936a607fe.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   color: #FFF;
   padding: 60px 0;
   text-align: center;
@@ -745,6 +746,85 @@ h1 {
   font-size: 12px;
   margin-bottom: 32px;
   margin-left: 11px;
+}
+
+.WhatWeDo__heading {
+  text-align: center;
+}
+.WhatWeDo__tabs-wrapper {
+  display: none;
+  margin-top: 90px;
+}
+@media (min-width: 1280px) {
+  .WhatWeDo__tabs-wrapper {
+    display: flex;
+  }
+}
+.WhatWeDo__tab {
+  cursor: pointer;
+  flex: 1;
+}
+.WhatWeDo__tab--active {
+  border-bottom: 3px solid #9DCD48;
+  padding-bottom: 7px;
+}
+.WhatWeDo__tab--active figure svg g {
+  fill: #9DCD48;
+}
+.WhatWeDo__tab--active .WhatWeDo__tab-heading {
+  color: #9DCD48;
+  font-weight: 700 !important;
+}
+.WhatWeDo__tab figure {
+  display: flex;
+  height: 79px;
+  justify-content: center;
+}
+.WhatWeDo__tab .WhatWeDo__tab-heading {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 2.909;
+  margin-top: 15px;
+  text-align: center;
+}
+.WhatWeDo__tabs-content {
+  background-color: rgba(216, 216, 216, 0.2);
+  padding: 81px 0;
+  position: relative;
+}
+.WhatWeDo__content {
+  left: 50%;
+  max-width: 780px;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.WhatWeDo__content--active {
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+}
+.WhatWeDo__content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.WhatWeDo__content ul li {
+  background-image: url(../f702579a557e6b0bcb0e.svg);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 20px;
+  font-size: 18px;
+  padding-left: 30px;
+}
+.WhatWeDo__content ul li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.WhatWeDo__mobile-tabs {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map*/

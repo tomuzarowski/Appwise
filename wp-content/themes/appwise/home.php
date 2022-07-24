@@ -16,6 +16,8 @@ get_header();
 
 <?php get_template_part('/template-parts/section-how-we-work'); ?>
 
+<?php get_template_part('/template-parts/section-what-we-do'); ?>
+
 <?php get_template_part('/template-parts/section-cta'); ?>
 
 <?php get_template_part('/template-parts/section-our-team'); ?>

@@ -1,6 +1,43 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/js/accordion.js":
+/*!********************************!*\
+  !*** ./assets/js/accordion.js ***!
+  \********************************/
+/***/ (() => {
+
+var desktopTabs = document.querySelector(".WhatWeDo__desktop-tabs");
+var mobileTabs = document.querySelector(".WhatWeDo__mobile-tabs");
+var mql = window.matchMedia("(min-width: 1280px)");
+
+function handleTabs(container) {
+  var tabs = container.querySelectorAll(".WhatWeDo__tab");
+  var contents = container.querySelectorAll(".WhatWeDo__content");
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (tab) {
+        return tab.classList.remove("WhatWeDo__tab--active");
+      });
+      contents.forEach(function (content) {
+        return content.classList.remove("WhatWeDo__content--active");
+      });
+      tab.classList.add("WhatWeDo__tab--active");
+      contents[index].classList.add("WhatWeDo__content--active");
+    });
+  });
+}
+
+function checkWindowSize() {
+  var container = mql.matches ? desktopTabs : mobileTabs;
+  handleTabs(container);
+}
+
+checkWindowSize();
+mql.addEventListener("change", checkWindowSize);
+
+/***/ }),
+
 /***/ "./assets/js/navigation.js":
 /*!*********************************!*\
   !*** ./assets/js/navigation.js ***!
@@ -109,6 +146,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/style.scss */ "./assets/sass/style.scss");
 /* harmony import */ var _js_navigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navigation.js */ "./assets/js/navigation.js");
 /* harmony import */ var _js_navigation_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_navigation_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_accordion_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/accordion.js */ "./assets/js/accordion.js");
+/* harmony import */ var _js_accordion_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_accordion_js__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 })();
