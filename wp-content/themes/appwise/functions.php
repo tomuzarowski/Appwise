@@ -11,7 +11,7 @@ class Appwise
 
     public function appwisePostTypes()
     {
-        register_post_type('team-members', [
+        register_post_type('appwise_post', [
             'labels' => [
                 'name' => 'Zespół',
                 'singular_name' => 'Osoba',
