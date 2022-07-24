@@ -20,11 +20,13 @@ class Appwise
 
         add_theme_support('html5', ['search-form', 'comment-form', 'comment-list', 'gallery', 'caption']);
 
-        register_nav_menus(
-            [
-                'primary' => __('Menu główne', 'appwise'),
-            ]
-        );
+        if (function_exists('register_nav_menus')) {
+            register_nav_menus(
+                [
+                    'primary' => __('Menu główne', 'appwise'),
+                ]
+            );
+        }
 
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page([

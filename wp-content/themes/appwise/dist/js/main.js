@@ -9,9 +9,10 @@
 
 var toggleBtn = document.getElementById('toggle');
 var mainNav = document.querySelector(".MainNav");
-toggleBtn === null || toggleBtn === void 0 ? void 0 : toggleBtn.addEventListener('click', function (e) {
+toggleBtn === null || toggleBtn === void 0 ? void 0 : toggleBtn.addEventListener('click', function () {
   toggleBtn.classList.toggle("Hamburger--open");
   mainNav === null || mainNav === void 0 ? void 0 : mainNav.classList.toggle("MainNav--active");
+  toggleBtn.classList.contains("Hamburger--open") ? document.documentElement.style.overflowY = "hidden" : document.documentElement.style.overflowY = "auto";
 });
 
 /***/ }),

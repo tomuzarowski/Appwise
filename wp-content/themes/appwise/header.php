@@ -36,15 +36,20 @@
                     </a>
                 </div>
 
-                <nav class="MainNav">
-                    <a href="#">O nas</a>
-                    <a href="#">Realizacje</a>
-                    <a href="#">Galeria</a>
-                    <a href="#">Oferta</a>
-                    <a href="#">Cennik</a>
-                    <a href="#">Zespół</a>
-                    <a href="#">Kontakt</a>
-                </nav>
+                <?php
+                $nav_items = wp_get_nav_menu_items('Menu główne');
+                if (!empty($nav_items)) :
+                ?>
+                    <nav class="MainNav">
+                        <ul>
+
+                            <?php foreach ($nav_items as $nav_item) : ?>
+                                <li><a href="#"><?= $nav_item->post_title; ?></a></li>
+                            <?php endforeach; ?>
+
+                        </ul>
+                    </nav>
+                <?php endif; ?>
             </div>
         </header>
 
