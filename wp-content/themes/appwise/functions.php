@@ -4,8 +4,33 @@ class Appwise
 {
     function __construct()
     {
+        add_action('init', [$this, 'appwisePostTypes']);
         add_action('after_setup_theme', [$this, 'themeSetup']);
         add_action('wp_enqueue_scripts', [$this, 'themeScripts']);
+    }
+
+    public function appwisePostTypes()
+    {
+        register_post_type('team-members', [
+            'labels' => [
+                'name' => 'Zespół',
+                'singular_name' => 'Osoba',
+                'add_new_item' => 'Dodaj osobę',
+                'add_new' => 'Dodaj osobę',
+                'all_items' => 'Wszystkie osoby',
+                'edit_item' => 'Edytuj osobę',
+                'new_item' => 'Nowa osoba',
+                'view_item' => 'Zobacz osobę',
+                'search_items' => 'Szukaj osób',
+                'not_found' => 'Brak osób',
+                'not_found_in_trash' => 'Brak osób w koszu'
+            ],
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => ['slug' => 'zespol'],
+            'supports' => ['title', 'editor', 'thumbnail'],
+            'menu_icon' => 'dashicons-groups'
+        ]);
     }
 
     public function themeSetup()
