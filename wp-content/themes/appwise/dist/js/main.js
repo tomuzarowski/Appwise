@@ -9,32 +9,34 @@
 
 var desktopTabs = document.querySelector(".WhatWeDo__desktop-tabs");
 var mobileTabs = document.querySelector(".WhatWeDo__mobile-tabs");
-var mql = window.matchMedia("(min-width: 1280px)");
 
-function handleTabs(container) {
-  var tabs = container.querySelectorAll(".WhatWeDo__tab");
-  var contents = container.querySelectorAll(".WhatWeDo__content");
-  tabs.forEach(function (tab, index) {
-    tab.addEventListener("click", function () {
-      tabs.forEach(function (tab) {
-        return tab.classList.remove("WhatWeDo__tab--active");
+if (desktopTabs || mobileTabs) {
+  var handleTabs = function handleTabs(container) {
+    var tabs = container.querySelectorAll(".WhatWeDo__tab");
+    var contents = container.querySelectorAll(".WhatWeDo__content");
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (tab) {
+          return tab.classList.remove("WhatWeDo__tab--active");
+        });
+        contents.forEach(function (content) {
+          return content.classList.remove("WhatWeDo__content--active");
+        });
+        tab.classList.add("WhatWeDo__tab--active");
+        contents[index].classList.add("WhatWeDo__content--active");
       });
-      contents.forEach(function (content) {
-        return content.classList.remove("WhatWeDo__content--active");
-      });
-      tab.classList.add("WhatWeDo__tab--active");
-      contents[index].classList.add("WhatWeDo__content--active");
     });
-  });
-}
+  };
 
-function checkWindowSize() {
-  var container = mql.matches ? desktopTabs : mobileTabs;
-  handleTabs(container);
-}
+  var checkWindowSize = function checkWindowSize() {
+    var container = mql.matches ? desktopTabs : mobileTabs;
+    handleTabs(container);
+  };
 
-checkWindowSize();
-mql.addEventListener("change", checkWindowSize);
+  var mql = window.matchMedia("(min-width: 1280px)");
+  mql.addEventListener("change", checkWindowSize);
+  checkWindowSize();
+}
 
 /***/ }),
 

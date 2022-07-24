@@ -26,6 +26,12 @@
         font-weight: 700;
         padding: 10px 35px;
 
+        &:hover,
+        &:active {
+            background-color: #fff;
+            color: $color-primary;
+        }
+
         @include query($desktop) {
             font-size: 32px;
         }

@@ -553,6 +553,10 @@ h1 {
   font-weight: 700;
   padding: 10px 35px;
 }
+.CTABanner__button:hover, .CTABanner__button:active {
+  background-color: #fff;
+  color: #9DCD48;
+}
 @media (min-width: 1280px) {
   .CTABanner__button {
     font-size: 32px;
@@ -677,7 +681,7 @@ h1 {
 
 .ContactForm {
   background-color: rgba(216, 216, 216, 0.2);
-  padding: 38px 32px 64px;
+  padding: 38px 32px 34px;
 }
 .ContactForm__heading {
   margin: 0 auto;
@@ -690,12 +694,11 @@ h1 {
   }
 }
 .ContactForm__wrapper {
-  margin: 46px auto;
+  margin: 46px auto 0;
   max-width: 780px;
 }
 @media (min-width: 1280px) {
   .ContactForm__wrapper {
-    margin-bottom: 0;
     margin-top: 30px;
   }
 }
@@ -720,7 +723,12 @@ h1 {
   height: 52px;
   margin: 36px auto;
   outline: none;
+  transition: all 250ms linear;
   width: 200px;
+}
+.ContactForm input[type=submit]:hover, .ContactForm input[type=submit]:active {
+  background-color: #fff;
+  color: #9DCD48;
 }
 .ContactForm input[type=text],
 .ContactForm input[type=email],
